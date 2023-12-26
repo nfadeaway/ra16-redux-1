@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+#root {
+  display: flex;
+  max-width: 1280px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  align-items: center;
+  /*justify-content: center;*/
+  margin-top: 100px;
+}
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+html {
+  font-size: calc( 10px + (14 - 10) * ((100vw - 400px) / ( 800 - 400)));
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.input-block {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-name, .input-price {
+  width: 250px;
+  height: 30px;
+}
+
+.input-save-btn, .input-cancel-btn {
+  display: flex;
+  height: 30px;
+  width: 70px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.goods {
+  display: flex;
+  flex-direction: column;
+}
+
+.good {
+  display: flex;
+  height: 30px;
+  font-size: 20px;
+  align-items: center;
+}
+
+.good-price, .good-edit-btn, .good-delete-btn {
+  margin-left: 20px;
+}
+
+.good-edit-btn, .good-delete-btn {
+  cursor: pointer;
+}

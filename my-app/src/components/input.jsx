@@ -25,6 +25,11 @@ const Input = () => {
     }
   }
 
+  const filterGoods = () => {
+    const name = refInputName.current.value
+    dispatch({type: 'FILTER_GOODS', payload: {name: name}})
+  }
+
   const cancel = () => {
     refInputName.current.value = ''
     refInputPrice.current.value = ''
@@ -43,7 +48,7 @@ const Input = () => {
 
   return (
     <div className="input-block">
-      <input ref={refInputName} type="text" className="input-name"/>
+      <input ref={refInputName} type="text" className="input-name" onChange={filterGoods}/>
       <input ref={refInputPrice} type="text" className="input-price"/>
       <div className="input-save-btn" onClick={addGood}>Save</div>
       {editName && <div className="input-cancel-btn" onClick={cancel}>Cancel</div>}

@@ -3,7 +3,6 @@ import React from 'react';
 import Input from './components/input.jsx';
 import Goods from './components/Goods.jsx';
 
-
 function App() {
 
   return (
